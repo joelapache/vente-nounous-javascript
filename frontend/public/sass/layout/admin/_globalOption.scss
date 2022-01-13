@@ -1,0 +1,119 @@
+.option-layout{
+
+    &--operation{
+        padding: 0 2rem;
+    
+        & .option{
+            font-size:1.4rem;
+            font-weight: 600;
+            margin:1rem 1rem 0 0;
+            cursor:pointer;
+            border-radius: .4rem;
+            transition: all .3s linear;
+    
+            &:last-child{
+                margin-right:0; 
+            }
+    
+            &.option-unlock{
+                border:.1rem solid rgb(17, 172, 3);
+                padding:.5rem 1.5rem .6rem 1.5rem;
+                color:rgb(17, 172, 3);
+                background: rgba(255, 255, 255, 0.8);
+               
+    
+                &:hover{
+                    background:rgb(17, 172, 3);
+                    color:#fff;
+                }
+            }
+
+            &.option-lock,
+            &.option-trash{
+                border:.1rem solid rgb(252, 73, 73);
+                padding:.5rem 1.5rem .6rem 1.5rem;
+                color:rgb(252, 73, 73);
+                background: rgba(255, 255, 255, 0.8);
+               
+    
+                &:hover{
+                    background:rgb(252, 73, 73);
+                    color:#fff;
+                }
+            }
+
+            &.option-print{
+                border:.1rem solid rgba(40, 57, 145, 0.6);
+                padding:.5rem 1.5rem .6rem 1.5rem;
+                color:rgb(40, 57, 145);
+                background: rgba(255, 255, 255, 0.4);
+               
+    
+                &:hover{
+                    background: rgb(40, 57, 145);
+                    color:#fff;
+                }
+            }
+    
+            
+            & i{
+                padding: .3rem .4rem;
+                float:right;
+                margin-top:.1rem;
+                font-size:1.8rem;
+            }
+        }
+    }
+
+
+
+
+    & .global-option{
+        padding: 0 2rem  .5rem 2rem;
+    
+        & .option{
+            font-size:1.4rem;
+            font-weight: 600;
+            margin:1rem 1rem 0 0;
+            cursor:pointer;
+            border-radius: .4rem;
+            transition: all .3s linear;
+    
+            &:last-child{
+                margin-right:0; 
+            }
+    
+            &.option-export,
+            &.option-import{
+                border:.1rem solid rgba(40, 57, 145, 0.6);
+                padding:.5rem 1.5rem .6rem 1.5rem;
+                color:rgb(40, 57, 145);
+                background: rgba(255, 255, 255, 0.4);
+               
+    
+                &:hover{
+                    background: rgba(255, 255, 255, 0.8);
+                }
+            }
+    
+            &.option-list,
+            &.option-add{
+                padding:.6rem 1.5rem .7rem 1.5rem;
+                background: rgb(40, 57, 145);
+                color:#fff;
+                border:none;
+    
+                &:hover{
+                    background: rgb(24, 37, 100);
+                }
+            }
+    
+            & i{
+                padding-left: 1rem;
+                float:right;
+                margin-top:.6rem;
+            }
+        }
+    }
+}
+

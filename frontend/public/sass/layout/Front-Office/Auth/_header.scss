@@ -1,0 +1,81 @@
+.header{
+    position: relative;
+    background: #fff;
+    border-bottom:.1rem solid rgba(0, 0, 0, 0.15);
+    
+    & > div{
+        padding:0rem 2rem;
+        max-width: 102.4rem;
+        margin: auto;
+
+        & a{
+            padding: .8rem 0 0 0;
+            & img{
+                width:16rem;
+                height:4.5rem;
+            }
+        }
+        
+        & .dropdown-lan{
+           // border:.1rem solid rgba(0, 0, 0, 0.1);
+            background: rgb(6, 50, 191);
+            border-radius: .3rem;
+            display: inline-block;
+            transition: background .2s linear;
+        
+            & label{
+                display: inline-block;
+                padding:.7rem 2rem;
+                font-size:1.4rem;
+                color: #555;
+                color:#fff;
+            }
+
+            
+            .list{
+                position:absolute;
+                background: #fff;
+                z-index: 3;
+                margin-left: -.1rem;
+                margin-top: .1rem;
+                display: inline-block;
+                width:9.8rem;
+                border:.1rem solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+                display: none;
+                
+
+                & li{
+                    
+                    cursor:pointer;
+                    
+                    
+                    & a{
+                        display: inline-block;
+                        padding:.8rem 2rem .8rem 2rem;
+                        color: #555;
+                        transition: background .2s linear;
+                        width:100%;
+                        font-size:1.3rem;
+
+                        &:hover{
+                            background: $color_blue_dark;
+                        }
+                    }
+                }
+            }
+
+            &:hover{ 
+                background: $color_blue_dark;
+            }
+            & #lanbox{
+                display: none;
+
+                &:checked~.list{
+                    display: inline-block;
+                }
+            }
+        
+        }
+    }
+}

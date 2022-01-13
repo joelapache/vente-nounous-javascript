@@ -1,0 +1,132 @@
+.newsletters-layout{
+    background: linear-gradient(to left bottom, $color_gradient);
+    padding:3rem 2rem;
+    max-width: $max_width_primary;
+    margin: auto;
+
+    &--content{
+        max-width: $max_width_secondary;
+        margin:auto;
+        
+        & .title{
+            text-align: center;
+
+            & h1{
+                color:rgba(255, 255, 255, 0.9);
+                font-size: 3rem;
+                margin-bottom: 2rem;
+
+                & .underline-title{
+                    display: inline-block;
+                    width: 10rem;
+                    height:0.2rem;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 1rem;
+                }
+            }
+
+            & p{
+                font-size: 1.8rem;
+                font-weight: 100;
+                color: $paragraphe_color_secondary;
+                line-height: $base_line_height;
+                color:rgba(255, 255, 255, 0.9);
+            }
+
+            & input{
+                width:100%;
+                outline: none;
+                border:none;
+                height:6rem;
+                margin:3rem auto;
+                padding:0 23rem 0 3rem;
+                font-size:1.8rem;
+                border:0.2rem solid #0377aa;
+                border-radius: 5rem;
+                transition: all .3s linear;
+
+                &:focus{
+                    padding-left: 4rem;
+                    font-size:2rem;
+                }
+            }
+
+            & .partner-btn{
+                height:4.8rem;
+                background:linear-gradient(to left bottom, $color_gradient);
+                color:$white;
+                margin:1rem auto 1rem auto;
+                font-size:1.6rem;
+                font-weight:bold;
+                transition:all .3s linear;
+                cursor:pointer;
+                width:20rem;
+                border:none;
+                border-radius: 5rem;
+                transform: translateX(-0.8rem) translateY(-9.4rem);
+                float:right;
+
+                &:hover{
+                  background-position: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .newsletters-layout{
+    
+        &--content{
+
+            & .title{
+                & input{
+                    padding:0 16rem 0 2rem;
+
+                    &:focus{
+                        padding-left: 3rem;
+                    }
+                }
+    
+                & .partner-btn{
+                    width:13rem;
+    
+                    &:hover{
+                      background-position: 13rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+ 
+@media (max-width: 400px) {
+
+    .newsletters-layout{
+    
+        &--content{
+
+            & .title{
+                & input{
+                    padding:2rem;
+
+                    &:focus{
+                        padding-left: 3rem;
+                    }
+                }
+    
+                & .partner-btn{
+                    margin: 0;
+                    transform: unset;
+                    transform: unset;
+                    float:unset;
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+ 

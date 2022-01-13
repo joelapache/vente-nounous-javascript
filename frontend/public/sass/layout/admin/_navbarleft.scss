@@ -1,0 +1,69 @@
+.body-layout{
+    
+
+    &--left{
+        position:fixed;
+        user-select: none;
+        z-index: 2;
+
+        & .menu-box{
+            height:91.4vh;
+            width:18.4rem;
+            background: rgb(40, 57, 145);
+            border-left: 1rem solid $color_blue_dark; //rgb(24, 37, 100)
+            overflow: hidden;
+            padding-top: 1rem;
+
+            &:hover{
+                overflow: auto;
+            }
+
+            & ul{
+
+                & li{
+                    position: relative;
+                    transition: all .3s linear;
+                    
+
+                    & .link-menu{
+                        display: inline-block;
+                        width:100%;
+                        padding:.8rem 1rem .8rem 1rem;
+                        font-size:1.3rem;
+                        color:rgba(255, 255, 255, 0.8);
+                        font-weight: 400;
+
+                        & i{
+                           //float: left;
+                            display: inline-block;
+                            font-size:1.4rem;
+                            width:3rem;
+
+                            &.fa{
+                                padding:.3rem 1rem 0 0;
+                            }
+
+                            &.icon{
+                                padding:.1rem 1rem 0 0;
+                            }
+                        }
+
+                        & span{
+                            display: inline-block;
+                        }  
+                    }
+
+                    &:hover{
+                        background: $color_blue_light;
+                    }
+
+                    //le lien actif
+                    &.active{
+                        background: $color_blue_dark; //rgb(24, 37, 100);
+                        color:$color_blue_normal;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.askService-layout {
+   padding:8rem 1rem;
+   background: #eee;
+   margin: 0 auto;
+   background-image:linear-gradient(to left bottom, $color_gradient), url('../../../image/image-base/font-livre.jpg');
+   background-attachment:fixed;
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:cover;
+   max-width: $max_width_primary;
+
+   &--content{
+      padding:3rem 0 0 0;
+      margin:auto;
+      max-width: 1280px;
+
+      padding: 2rem 3rem;
+      background:rgba(255, 255, 255, 1);
+      max-width: 102.4rem;
+      border-radius:1rem;
+      margin:auto;
+
+      & .description{
+         transform: translateX(-10rem);
+         background:rgba(255, 255, 255, 1);
+         border-radius:1rem; 
+         padding: 2rem 2rem  4rem 2rem;
+         box-shadow: 0 0.5rem 4rem 0  rgba(30, 20, 168, 0.2);
+
+         & h2 {
+            padding: 0.5rem 0;
+            color:  $color_blue_normal;
+            font-weight: bold;
+            font-size:4rem;
+            background-image: linear-gradient(to left bottom, $color_gradient);
+            background-clip: text;
+            color:transparent;
+
+            & .underline-title{
+               display: inline-block;
+               width: 10rem;
+               height:0.2rem;
+               background-color: $color_red_light;
+               margin-bottom: 1rem;
+            }
+         }
+
+         & p {
+            text-align: justify;
+            color:#666;
+         }
+      }
+   }
+}
+
+ 
+ @media (max-width: 1280px) {
+   .askService-layout {
+      &--content{
+         max-width: 868px;
+      }
+   }
+}
+ 
+ @media (max-width: 1068px) {
+      .askService-layout {
+         &--content{
+            max-width: 668px;
+         }
+      }
+ }
+ 
+ @media (max-width: 900px) {
+    
+   .askService-layout {
+      &--content{
+         & .description{
+            transform: translateX(-7rem);
+        }
+      }
+   }
+ }
+ 
+ @media (max-width: 800px) {
+
+   .askService-layout {
+
+      &--content{
+         flex-wrap: wrap;
+         padding: 1rem;
+            
+         & .description{
+            flex:100%;
+            transform: translateX(0);
+            transform: translateY(-5rem);
+         }
+         
+         & .form-commande {
+            flex:100%;
+
+            & .inputBox{
+               & .btn-follow {
+                  width:100%;
+                  text-align: center;
+                  font-size:1.6rem;
+               }
+            }
+         }
+      }
+   }
+ }
+ 

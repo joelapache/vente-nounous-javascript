@@ -1,0 +1,29 @@
+.detail-info-popup{
+
+    & span{
+        display: inline-block;
+        width:100%;
+        margin: 2rem auto;
+        border-bottom: .1rem solid #eee;
+        color:$color_blue_normal;
+    }
+
+    & > div{
+
+        & > div{
+            padding: .8rem 0;
+
+            & label:nth-child(1){
+                display: inline-block;
+                width:18rem;
+                font-weight: 600;
+                color:#333;
+                font-size:1.4rem;
+            }
+
+            & label:nth-child(2){
+                color:#666;
+            }
+        }
+    }
+}

@@ -1,0 +1,246 @@
+.fonctionality-layout{
+    background: $white;
+    max-width: $max_width_primary;
+    margin:auto;
+
+    
+
+    &--title{
+        text-align: center;
+
+        & h1{
+            font-size: 4rem;
+            background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+            background-clip: text;
+            color:transparent;
+            padding-top: 5rem;
+    
+            & .underline-title{
+                display: inline-block;
+                width: 10rem;
+                height:0.2rem;
+                background-color: $color_red_light;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+
+    &--content{
+        max-width: $max_width_normal;
+        margin:auto;
+        padding:1rem;
+        
+
+        & .fonction-block{
+            background-size:50% 20rem;
+            background-repeat:no-repeat;
+            background-position:left;
+            margin:auto;
+
+            &.right{
+                flex-direction:row-reverse;
+            }
+
+            &  > div{
+                flex:50%;
+                margin:1rem;
+            }
+
+            & p{
+                padding:1rem 0;
+                line-height:0.8cm;
+                color:rgba(0, 0, 0, 0.8);
+                font-size:1.6rem;
+            }
+            & h1{
+                font-weight: 600;
+                padding:0 0 1rem 0;
+                color: $color_blue_normal;
+                font-size:4rem;
+                background-image: linear-gradient(to left, $color_gradient);
+                background-clip: text;
+                color:transparent;
+            }
+
+            & .description{
+
+                border-radius:3rem;
+                padding:3rem;
+                position:relative;
+                box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.1);
+                
+                & .btn-test{
+                    
+                    & .btn-blue{
+                        margin-top:1rem;
+                        text-transform:uppercase; 
+                        text-decoration:none;
+                        padding:1.2rem 4rem;
+                        display:inline-block;
+                        border-radius:10rem;
+                        transition:all .2s; 
+                        position:relative;
+                        font-size:1.3rem;
+                        font-weight:600;
+                        cursor:pointer;
+                        border:0.15rem solid  $color_blue_light;
+                        background:transparent;
+                        color: $color_blue_light;
+                        text-align: center;
+
+                        
+                        &::after{
+                            content:"";
+                            display:inline-block;
+                            height:100%;
+                            width:100%;
+                            border-radius:10rem;
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            z-index:-1;
+                            opacity:0.6;
+                            transition:all .5s linear;	
+                            background: $color_blue_normal;
+                        }
+
+                        &:hover{
+                            transform: translateY(-0.3rem);
+                            box-shadow:0 1rem 2rem rgba(0,0,0,.2);
+                            background: $color_blue_normal;
+                            color:#fff;
+                            border:0.1rem solid transparent;
+                            background-image: linear-gradient(to left, $color_gradient);
+
+                            &::after{
+                                transform:scale(1.2) scale(1.4);
+                                opacity:0;
+                             }
+                        }
+
+                        &:active{
+                            transform: translateY(-0.1rem);
+                            box-shadow:0 0.5rem 2rem rgba(0,0,0,.2);
+                        }
+
+                    }
+                }
+            }
+
+            & .image{
+                & img {
+                    width:100%;
+                }
+            }
+        } 
+    }
+
+    & .services{
+        & .fonction-block{
+            margin:10rem auto;
+
+            & .description{
+                box-shadow: 0 0rem 0rem 0 rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+  
+
+ @media (max-width: 768px) {
+
+    .fonctionality-layout{
+    
+        &--content{
+            
+            & .fonction-block{
+                
+                &.left{
+                    flex-direction:column-reverse;
+                }	
+                &.right{
+                    flex-direction:column-reverse;
+                }	
+                & .description{
+                    box-shadow:0 0.1rem 0 0 rgba(0, 0, 0, 0);
+                    border-radius:0 0;
+
+                    & h1{
+                        font-size:2.5rem;
+                    }
+                }	
+                & .image{
+                    & img {
+                        width:100%;
+                    }
+                } 
+            }
+        }
+    }
+ }
+ 
+ 
+ @media (max-width: 480px) {
+
+    .fonctionality-layout{
+    
+        &--content{
+            
+            & .fonction-block{
+
+                & .description{
+                   
+
+                    & h1{
+                        font-size:1.8rem;
+                        text-align:center;
+                    }
+                    & p{
+                        text-align:justify;
+                    }
+                    & .btn-test{
+                        justify-content:center;
+                    }
+                }	
+                &,
+                & .description{
+                    padding:0;
+                }
+            }
+        }
+    }
+    
+ }
+       
+ 
+ @media (max-width: 400px) {
+    
+    .fonctionality-layout{
+    
+        &--content{
+            
+            & .fonction-block{
+
+                & .description{
+
+                    & h1{
+                        font-size:1.6rem;
+                    }
+                    & p{
+                        font-size:1.3rem;
+                    }
+                    & .btn-test{
+                        flex-direction:column;
+                        padding:0;
+
+                        & div{
+                            text-align:center;
+                            width:100%;
+                            margin:1rem auto;
+                        }
+                    }
+                }	
+            }
+        }
+    }
+ }

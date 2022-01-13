@@ -1,0 +1,59 @@
+.radiobox{
+    position: relative;
+
+
+    .radio-label {
+        font-size: 1.6rem;
+        color:#555;
+    }
+
+    & .radio{
+        position: relative;
+        width:1.6rem;
+        height:1.6rem;
+        border-radius:5rem;
+        background: #fff;
+        border:0.2rem solid rgba(4, 0, 255, 0.8);
+        transition: .2s linear;
+ 
+            
+        & .chk-background{
+            background: rgba(40, 57, 145, 0.1);
+            width:.8rem;
+            height:.8rem;
+            border-radius:5rem;
+            position:relative;
+            transition:all .2s ease-in;
+        }
+    }
+
+    & .chk-input{
+        display:none;
+        position: absolute;
+
+        &:checked~ .chk-background{
+            background: $color_blue_normal;
+        }
+    }
+
+    &:hover{
+        & .radio{
+            border:0.2rem solid $color_blue_normal;
+        }
+    }
+}
+
+
+.radiobox-group{
+
+    & .group-radio-label{
+        margin-bottom: 0rem;
+        font-size:1.4rem;
+        color:#444;
+        font-weight: 600;
+
+        & i {
+            color: red;
+        }
+    }
+}

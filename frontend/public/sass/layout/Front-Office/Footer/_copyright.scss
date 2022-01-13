@@ -1,0 +1,10 @@
+.footer-layout{
+    background: $color_blue_dark;
+    text-align: center;
+    padding: 1rem 2rem;
+
+    & .copyright{
+        font-size: 1.6rem;
+        color: #fff;
+    }
+}

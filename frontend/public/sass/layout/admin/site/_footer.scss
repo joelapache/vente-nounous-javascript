@@ -1,0 +1,299 @@
+
+   
+/*
+-------------------------------------------------------
+-------------------------footer block------------------
+-------------------------------------------------------
+*/
+/*block de style des mode de payement */
+       
+footer {
+    background:$color_blue_normal;
+    background-image:linear-gradient(to left bottom, $color_gradient),url("../../../image/image-base/fond.jpg");
+    padding:2rem 2rem 0 2rem;
+    margin:auto;
+    //max-width: $max_width_primary;
+    
+    & .first-box{
+        margin: auto;
+        max-width: $max_width_normal;
+        padding:5rem 0;
+
+        & .payement-mode div{
+            padding: 0.5rem;
+
+            & img {
+                width: 5rem;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+    & .suptitle-component{
+        max-width: $max_width_primary;
+        margin: auto;
+
+        & .title-group {
+            margin: 1rem 1rem 3rem 1rem; 
+
+            & .title-list{
+            
+                & li:first-child,
+                &  .suptitle {
+                    font-weight: bold;
+                    color: rgba(255, 255, 255, 0.9);
+                    padding: 1rem 0;
+                    font-size: 1.6rem;
+                }
+
+                &.contact .item.contact{
+                    padding-left:2.5rem;
+                }
+
+                &.contact .item::before{
+                    font-family:FontAwesome;
+                    margin-left:-2.5rem;
+                    margin-top:0.7rem;
+                    position:absolute;
+                    color:rgba(255, 255, 255, 1);
+                }
+
+                &.contact li:nth-child(2)::before{
+                    content:"\f041";
+                }
+                &.contact li:nth-child(3)::before{
+                    content:"\f095";
+                }
+
+                &.contact li:nth-child(4)::before{
+                    content:"\f232";
+                }
+
+                &.contact li:nth-child(5)::before{
+                    content:"\f0e0";
+                }
+
+                & .item:hover {
+                    transition: all .5s;
+                    -webkit-transform: translate(3px, 0em);
+                    -moz-transform: translate(3px, 0em);
+                    -ms-transform: translate(3px, 0em);
+                    -o-transform: translate(3px, 0em);
+                    transform: translate(3px, 0em);
+                }
+
+                &  .item.appstore:hover,
+                &  .item.socialmedia:hover {
+                    -webkit-transform: translate(0px);
+                    -moz-transform: translate(0px);
+                    -ms-transform: translate(0px);
+                    -o-transform: translate(0px);
+                    transform: translate(0px);
+                }
+
+                &  .item.appstore img {
+                    filter: grayscale(100%);
+                }
+
+                &  .item.appstore img:hover {
+                    filter: grayscale(0%);
+                }
+
+                &  .item.socialmedia a{
+                    padding:0.8rem 0.9rem;
+                    background:rgba(255, 255, 255, 0.6);
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    align-items:center;
+                    margin-right:0.5rem;
+                    border-radius:3rem;
+                    height:3.5rem;
+                    width:3.5rem;
+                    transition: all .3s linear;
+                }
+
+                & .item.socialmedia i {
+                    font-size: 18px;
+                    color: rgb(50, 50, 100);
+                }
+
+                & .item.socialmedia > i:nth-child(1){
+                    padding:0.8rem 1.5rem;
+                }
+                & .item.socialmedia a:hover{
+                    background:rgba(255, 255, 255, 1);
+                    color: black;
+                }
+
+                & .item{
+                    color: rgba(255, 255, 255, 0.9);
+                    font-size:1.4rem;
+                    line-height:0.6cm;
+                }
+
+                & .item .logo{
+                    width:22rem;
+                    height:11rem;
+                }
+
+                & .item a{
+                    color: rgba(255, 255, 255, 1);
+                    display:inline-block;
+                    padding: 0.5rem 0;
+                }
+
+                & .item img {
+                    width: 10rem;
+                    background:white;
+                }
+
+                &.item a:hover {
+                    color: #eee;
+                }
+                
+            }
+        }
+    }
+
+
+    & .group-content {
+        border-top: 1px solid #aaa;
+
+        & .container{
+            max-width: $max_width_normal;
+            margin: auto;
+            font-size: 1.2rem;
+
+            & .copyright:last-child {
+                text-align: right;
+            }
+
+        }
+
+
+        & .container:first-child div,
+        & .container:last-child  div {
+            margin: 1rem;
+        }
+
+        & .container p,
+        & .container a,
+        & .container .copyright{
+            color: rgba(255, 255, 255, 1);
+        }
+
+        
+        & .container a:hover {
+            text-decoration: underline;
+        }
+        
+    }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    footer .first-box{
+        flex-direction:column;
+    }
+    
+    footer .first-box > div{
+        width:100%;
+    }
+    
+    footer .first-box .payement-mode{
+        justify-content:center;
+    }
+    
+    footer .first-box  .newletters-box > div:nth-child(1){
+        flex:80%;
+    }
+    footer .first-box  .newletters-box > div:nth-child(2){
+        flex:20%;
+    }
+    
+    footer .suptitle-container{
+        flex-wrap: wrap;
+    }
+    footer .suptitle-container .title-group{
+        flex: 30%;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    footer {
+        
+        & .--row{
+            flex-wrap: wrap;
+
+            & .flex-col-30{
+                flex:40%;
+            }
+        }
+        
+    }
+    
+    
+}
+
+@media (max-width: 700px) {
+    
+    footer{
+        padding:1rem;
+        
+        & .payement-mode img {
+            width: 5rem;
+            transition: all 0.5s;
+        }
+
+        & > .--row{
+            flex-wrap: wrap;
+    
+            & .flex-col-30{
+                flex:100%;
+            }
+        }
+
+        & .group-content .--row {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            & .flex-col-50{
+                flex: 100%;
+                text-align: center;
+                width:100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    
+    footer{
+        & .suptitle-component {
+
+            & .title-group .title-list{ 
+                    
+                & .item .link-logo{
+                    width: 100%;
+                    text-align:center;
+
+                    & .logo{
+                        width: 20rem;
+                        margin:auto;
+                    }
+                }
+
+                & .item a{
+                    font-size:1.3rem;
+                }
+            }
+        }
+    }
+}

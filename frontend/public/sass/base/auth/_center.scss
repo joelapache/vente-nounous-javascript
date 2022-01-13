@@ -1,0 +1,364 @@
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration:none;
+    list-style:none;
+    outline: none;
+}
+       
+html{
+    font-size:10px;
+    
+}
+       
+body {
+    font-family: $popins_font; 
+    font-weight:400;
+    line-height:1.7;
+    color:#777;
+    box-sizing: border-box;
+   
+
+    & .background{
+        position: fixed;
+        background: rgba(30, 20, 168, 0.08);
+        height:100%;
+        width:100%;
+    }
+}
+
+
+
+
+
+input,
+textarea,
+select,
+button{
+    font-family: $popins_font; 
+}
+       
+a,
+a:link,
+a:visited,
+a:active{
+    color:#777;
+    font-size:1.6rem;
+}
+
+.menu-box-header{
+    height:6.6rem;
+}
+
+::after,
+::before{
+    font-family: FontAwesome;
+}
+
+
+.popup-personal{
+    overflow: auto;
+    position:absolute;
+    width: 22rem;
+    max-height:40rem;
+    background:#fff;
+    box-shadow:0 0 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    z-index: -1;
+    visibility: hidden;
+    transform: translateY(3rem);
+    transition-duration: .2s;
+    transition-property:transform visibility;
+    transition-timing-function: ease-in;
+}
+       
+
+
+//--flex container section--
+.flex-container{
+
+    display: flex;
+    
+
+    //alignement en ligne
+    &.--row{
+        flex-direction: row;
+
+        &.--align-center{
+            align-items: center;
+        }
+    
+        &.--align-stretch{
+            align-items: stretch;
+        }
+
+        &.--align-start{
+            align-items: flex-start;
+        }
+
+        
+        &.--align-end{
+            align-items: flex-end;
+        }
+
+        &.--align-end{
+            align-items: flex-normal;
+        }
+
+        &.--justify-start{
+            justify-content: flex-start;
+        }
+
+        &.--justify-end{
+            justify-content: flex-end;
+        }
+    
+        &.--justify-center{
+            justify-content:center;
+        }
+    
+        &.--justify-around{
+            justify-content:space-around;
+        }
+    
+        &.--justify-evenly{
+            justify-content:space-evenly;
+        }    
+
+        &.--justify-between{
+            justify-content:space-between;
+        } 
+
+        &.--justify-normal{
+            justify-content:normal;
+        } 
+
+       
+
+        &.--content-center{
+            align-content: center;
+        }
+
+        &.--content-start{
+            align-content: flex-start;
+        }
+
+       
+
+        &.--content-end{
+            align-content: flex-end;
+        }
+
+        &.--content-stretch{
+            align-content: stretch;
+        }
+
+        &.--content-normal{
+            align-content: normal;
+        }
+        
+        &.--wrap{
+            flex-wrap: wrap;
+        }
+
+        &.--nowrap{
+            flex-wrap: nowrap;
+        }
+    }
+
+    // alignement en colonne
+    &.--column{
+        flex-direction: column;
+
+        &.--align-center{
+            align-items: center;
+        }
+    
+        &.--align-stretch{
+            align-items: stretch;
+        }
+
+        &.--align-start{
+            align-items: flex-start;
+        }
+
+        
+        &.--align-end{
+            align-items: flex-end;
+        }
+
+        &.--align-end{
+            align-items: flex-normal;
+        }
+
+        &.--justify-start{
+            justify-content: flex-start;
+        }
+
+        &.--justify-end{
+            justify-content: flex-end;
+        }
+    
+        &.--justify-center{
+            justify-content:center;
+        }
+    
+        &.--justify-around{
+            justify-content:space-around;
+        }
+    
+        &.--justify-evenly{
+            justify-content:space-evenly;
+        }    
+
+        &.--justify-between{
+            justify-content:space-between;
+        } 
+
+        &.--justify-normal{
+            justify-content:normal;
+        } 
+
+       
+
+        &.--content-center{
+            align-content: center;
+        }
+
+        &.--content-start{
+            align-content: flex-start;
+        }
+        
+        &.--content-end{
+            align-content: flex-end;
+        }
+
+        &.--content-stretch{
+            align-content: stretch;
+        }
+
+        &.--content-normal{
+            align-content: normal;
+        }
+    }
+
+    /*--------- les marges internes  -------------*/
+
+    //la marge interne de 10px tous les cote
+    & .--padding-both-10{
+        padding: 1rem;
+    }
+    //la margin ixterne de 20px tous les cote
+    & .--padding-both-20{
+        padding: 2rem;
+    }
+     //la margin ixterne de 20px à droit
+    & .--padding-right-20{
+        padding: 2rem;
+    }
+    //la margin ixterne de 10px à droit
+    & .--padding-right-10{
+        padding: 1rem;
+    }
+
+
+    /*--------- les marges externes  -------------*/
+
+    //la margin externe de 10px à gauche
+    & .--margin-left-5{
+        margin-left:1rem;
+    }
+    //la margin externe de 10px à droit
+     & .--margin-right-5{
+        margin-right:1rem;
+    }
+    //la margin externe de 10px à gauche
+    & .--margin-left-10{
+        margin-left:1rem;
+    }
+    //la margin externe de 10px à droit
+    & .--margin-right-10{
+        margin-right:1rem;
+    }
+    //la margin externe de 10px à gauche
+    & .--margin-left-20{
+        margin-left:2rem;
+    }
+    //la margin externe de 20px à droit
+    & .--margin-right-20{
+        margin-right:2rem;
+    }
+    
+    /*--------- redimensionnement des colonnes -------------*/
+
+    //colonne de 10 %
+    & > .flex-col-10{
+        flex:10%
+    }
+
+    //colonne de 15 %
+    & > .flex-col-15{
+        flex:15%
+    }
+
+    //colonne de 20 %
+    & > .flex-col-20{
+        flex:20%
+    }
+    //colonne de 25 %
+    & > .flex-col-25{
+        flex:25%
+    }
+    //colonne de 30 %
+    & > .flex-col-30{
+        flex:30%
+    }
+    //colonne de 40 %
+    & > .flex-col-40{
+        flex:40%
+    }
+    //colonne de 50 %
+    & > .flex-col-50{
+        flex:50%
+    }
+    //colonne de 60 %
+    & > .flex-col-60{
+        flex:60%
+    }
+    //colonne de 70 %
+    & > .flex-col-70{
+        flex:70%
+    }
+    //colonne de 80 %
+    & > .flex-col-80{
+        flex:80%
+    }
+    //colonne de 90 %
+    & > .flex-col-90{
+        flex:90%
+    }
+     //colonne de 95 %
+     & > .flex-col-95{
+        flex:95%
+    }
+    //colonne de 100 %
+    & > .flex-col-100{
+        flex:100%
+    }
+
+    & > .self-center{
+        align-self: center;
+    }
+}
+
+//input
+
+
+.--hide{
+    display:none;
+}
+

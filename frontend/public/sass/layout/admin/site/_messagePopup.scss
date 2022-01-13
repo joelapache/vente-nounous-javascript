@@ -1,0 +1,86 @@
+//background shadow of popup
+.popup-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background-color: green;
+    opacity: 0.6;
+    z-index: 3;
+    display: none;
+}
+
+
+//popup of message
+.errormsg-popup{
+    position: fixed;
+    bottom:6rem;
+    right:-40rem;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 1rem 1rem;
+    background: white;
+    max-width: 25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 4rem 0 rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+    //animation: vibrate 1s linear infinite;
+
+    &.sucess{
+        right:-11rem;
+        border-bottom: 0.3rem solid rgb(9, 255, 9);
+        background:rgb(178, 247, 178);
+
+        & .errormsg-popup--title{
+            font-size:1.6rem;
+            color:rgb(3, 105, 3);
+            font-weight: 400;
+            border-bottom: 0.1rem solid rgb(0, 0, 9, 0.3);
+
+            & i{
+                float: right;
+            }
+        }
+    }
+
+    &.failed{
+        right:-11rem;
+        border-bottom: 0.3rem solid rgb(255, 9, 9);
+        background:rgb(252, 184, 184);
+
+        & .errormsg-popup--title{
+            font-size:1.6rem;
+            font-weight: 400;
+            color:rgb(255, 9, 9);
+            border-bottom: 0.1rem solid rgb(0, 0, 9, 0.3);
+
+            & i{
+                float: right;
+            }
+        }
+    }
+
+
+
+    &--message{
+        font-size:1.4rem;
+        font-weight: 400;
+        color:#444;
+    }
+
+    
+}
+
+@keyframes vibrate{
+    0%{
+        right:-13rem;
+    }
+    50%{
+        right:-12rem;
+    }
+    100%{
+        right:-14rem;
+    }
+}

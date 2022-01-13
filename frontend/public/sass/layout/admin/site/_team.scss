@@ -1,0 +1,165 @@
+
+/* team members */
+
+.team-component{
+    
+    max-width: $max_width_primary;
+    margin: auto;
+    background: rgb(250, 250, 252);
+
+    &--content{
+        margin:auto;
+        max-width:$max_width_normal;
+
+        & .title{
+            margin:auto;
+            max-width:$max_width_secondary;
+            text-align: center;
+            padding:3rem 1.5rem 2rem 1.5rem;
+
+            & h1{
+                font-size: 3rem;
+                background: linear-gradient(to left bottom, $color_gradient);
+                background-clip: text;
+                color:transparent;
+                margin-bottom: 2rem;
+    
+                & .underline-title{
+                    display: inline-block;
+                    width: 10rem;
+                    height:0.2rem;
+                    background-color: $color_red_light;
+                    margin-bottom: 1rem;
+                }
+            }
+    
+            & p{
+                font-size: 1.8rem;
+                font-weight: 300;
+                color: $paragraphe_color_thirtiary;
+                line-height: $base_line_height;
+            }
+        }
+
+        & .details{
+            margin:auto;
+            max-width:80rem;
+            padding:4rem 0;
+
+            & .team-info{
+                margin:1rem ;
+                background:$white;
+                border-radius:1rem;
+                padding:4rem 0;
+                box-shadow:0 1rem 4rem 0 rgba(0, 0, 0, 0.08);
+                cursor:pointer;
+                transition:all .3s;
+
+                & .info .details{
+                    padding:2rem 0;
+
+                    & .name{
+                        font-size:1.4rem;
+                        font-weight:bold;
+                        color:$color_blue_normal;
+                        background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+                        background-clip: text;
+                        color:transparent;
+                        text-align:center;
+                    }
+
+                    & .post{
+                        font-size:1.3rem;
+                        color:#777;
+                        text-align:center;
+                    }
+                }
+
+                & .image{
+                    text-align:center;
+
+                    & img{
+                        height:13rem;
+                        width:13rem;
+                        border-radius:100%;
+                        border-color: $color_gradient_double;
+                        border-style:solid;
+                        border-width: 0.2rem;
+                        padding:1rem;
+                    }
+                }
+
+
+                & .social{
+                    text-align:center;
+                    background:linear-gradient(to right , $color_gradient);
+                    margin:1rem;
+                    border-radius:0.3rem;
+                    border:0.2rem solid #ddd;
+                    border:none;
+
+                    & a i{
+                        font-size:3rem;
+                        color:rgba(255, 255, 255, 0.9);
+                        transition: all .3s;
+                        &:hover{
+                            transform: scale(1.03);
+                            filter: grayscale(100%)
+                        }
+                    }
+                }
+
+                & .description{
+                    color:rgba(0, 0, 0, 0.6);
+                    font-size:1.3rem;
+                    text-align:center;
+                    padding: 2rem;
+                }
+
+                &:hover .info img{
+                    border:0.2rem solid #fff;
+                    padding:1rem;
+                }
+
+                &:hover .info .details .name,
+                &:hover .info .details .post,
+                &:hover .description{
+                    color:rgba(255,255, 255, 0.9);
+                }
+
+                &:hover .social{
+                    background:rgba(255,255, 255, 1);
+                }
+
+                &:hover .social a i{
+                    color:$color_blue_normal;
+                    background: linear-gradient(to left bottom, $color_gradient);
+                    background-clip: text;
+                    color:transparent;
+                }
+
+               
+
+                &:hover{
+                    background:linear-gradient(to left bottom, $color_gradient);
+                }
+            }
+        }
+    }
+ }
+ 
+ 
+ @media (max-width: 668px) {
+    .team-component{
+        &--content{
+            & .details{
+                flex-wrap:wrap;
+
+                & .team-info{
+                    flex:100%;
+                }
+            }
+        }
+    }
+}
+ 

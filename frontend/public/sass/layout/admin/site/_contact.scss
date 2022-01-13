@@ -1,0 +1,114 @@
+.contact-formular{
+    max-width: $max_width_primary;
+    margin:auto;
+   
+   
+
+    &--content{
+        margin:auto;
+        max-width: 80rem;
+        padding:2rem;
+        background:rgba(255, 255, 255, 1);
+        z-index: 1;
+        position: relative;
+
+        & .form {
+            margin:0 auto;
+            
+
+            & h1{
+                font-size: 3rem;
+                background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+                background-clip: text;
+                color:transparent;
+                margin-bottom: 1rem;
+        
+                & .underline-title{
+                    display: inline-block;
+                    width: 10rem;
+                    height:0.2rem;
+                    background-color: $color_red_light;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            & p{
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: $paragraphe_color_secondary;
+                line-height: $base_line_height;
+            }
+        }
+
+        &  .description{
+            padding:2rem;
+            margin:0 auto;
+            margin-top:0;
+
+            & .address{
+                padding:rem;
+                margin:2rem auto;
+
+                &  > div{
+                    margin:3rem auto;
+                    padding-left:4rem;
+
+                    & a{
+                        font-size:1.6rem;
+                        color:#777;
+                    }
+
+                    &::before{
+                        font-family:FontAwesome;
+                        position:absolute;
+                        margin-left:-4rem;
+                        font-size:2rem;
+                        color:$color_blue_normal;
+                    }
+                    &.location::before{
+                        content:"\f041";
+                    }
+                    &.phone::before{
+                        content:"\f10b";
+                    }
+                    &.email::before{
+                        content:"\f0e0";
+                    }
+                }
+            }
+
+            & iframe{
+                width: 100%; 
+                height: 400px;
+                background: rgb(251, 250, 252,0.6);
+            }
+        }
+    }
+}
+ 
+
+@media (max-width: 800px){
+    .contact-formular .container{
+        flex-direction:column;
+    }
+    
+    .contact-formular .container .description,
+    .contact-formular .container .description .address{
+        width:100%;
+        padding:0px;
+        margin:0px auto;
+    }
+}
+
+@media (max-width: 480px){
+    .contact-formular .container .description iframe{
+        width: 100%; 
+        height: 250px;
+    }
+    
+    .contact-formular .container .form h1,
+    .contact-formular .container .description .address h1{
+        font-size:20px;
+    }
+
+}

@@ -1,0 +1,168 @@
+.objectif-layout{
+    margin:0;
+    padding:3rem 0 5rem 0;
+    background:$bg_color_normal;
+    
+    &--content{
+        margin:auto;
+        max-width: $max_width_normal;
+
+        &__title{ 
+            text-align: center;
+            margin:auto;
+            max-width: $max_width_secondary;
+            padding: 2rem;
+        
+            & h1{
+                font-size: 3rem;
+                background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+                background-clip: text;
+                color:transparent;
+                margin-bottom: 2rem;
+        
+                & .underline-title{
+                    display: inline-block;
+                    width: 10rem;
+                    height:0.2rem;
+                    background-color: $color_red_light;
+                    margin-bottom: 1rem;
+                }
+            }
+            & p{
+                font-size: 1.8rem;
+                font-weight: 100;
+                color: $paragraphe_color_secondary;
+                line-height: $base_line_height;
+            }
+        }
+
+        &__details{
+            max-width:128rem;
+            margin:5rem auto ;
+            position:relative;
+
+            & > div{
+                background:rgba(255, 255, 255, 0.9);
+                padding:0 2rem 2rem 2rem;
+                margin:2rem;
+                cursor:pointer;
+                padding:2rem 2rem 2rem 3rem;
+                position:relative;
+                box-shadow: 0 1rem 6rem 0 rgba(30, 20, 168, 0.06);
+                border-radius: 1rem 1rem 1rem 1rem;
+                transition: all .4s linear;
+
+                &::before,
+                &::after{
+                    content:"";
+                    margin: auto;
+                    width:0.2rem;
+                    height:45%;
+                    left:0;
+                    position:absolute;
+                    border-radius: 1rem;
+                }
+
+                &::before{
+                    top:50%;
+                    background-image: linear-gradient(to left, $color_gradient);
+                }
+
+                &::after{
+                    background-image: linear-gradient(to left, #03bdef, rgba(30, 20, 168, 0.8));
+                    bottom:50%;
+                }
+
+                &:hover{
+                    transform: translateY(-1rem);
+                    background-blend-mode:darken;
+                    background-size: 105% 105%;
+                }
+
+                & i{
+                    text-align: right;
+                    font-size:4rem;
+                    margin:0 0 1rem 0;
+                    transition:all 1s linear;
+                    border-color:  $color_blue_light  $color_blue_light $color_blue_normal $color_blue_normal ;
+                    border-style: double;
+                    border-width: 0.1rem;
+                    padding: 1.5rem 1.5rem  0.5rem 1.5rem;
+                    border-radius: 50%;
+                }
+
+                & h3{
+                    padding-bottom:1rem;
+                    color:$color_blue_normal; 
+                    font-size:2rem;
+                    transition:all 1s linear;
+                }
+
+                & i,
+                & h3{
+                    background-image: linear-gradient(to left bottom, $color_gradient);
+                    background-clip:text ;
+                    color:transparent;
+                }
+                & p{
+                    font-size:1.4rem;
+                    line-height:0.6cm;
+                    color:#777; 
+                }
+                
+            }
+        }
+    }
+}
+    
+    
+@media only screen and (max-width: 600px)
+{
+    .objectif-layout{
+            
+        &--content{
+                
+            &__details{
+        
+                & > div{
+                    margin:1rem;
+                }
+            }
+        }
+    }
+}
+    
+    
+@media only screen and (max-width: 480px)
+{
+
+    .objectif-layout{
+            
+        &--content{
+
+            &__title{
+                & p{
+                    text-align:justify;
+                    text-indent: 1cm;
+                }
+            }
+        
+            &__details.--row{
+                flex-direction:column;
+        
+                & > div{
+                    margin:1rem;
+
+                    & h3{
+                        font-size:1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+    
+    
+
+    

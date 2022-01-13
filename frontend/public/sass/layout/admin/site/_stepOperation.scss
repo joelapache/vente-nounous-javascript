@@ -1,0 +1,310 @@
+.operation-layout{
+    background: transparent;
+    background: rgba(30, 20, 168, 0.06);
+    padding: 3rem 0 3rem 0;
+    
+    &--title{
+        text-align: center;
+
+        & h1{
+            font-size: 4rem;
+            background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+            background-clip: text;
+            color:transparent;
+            margin-bottom: 2rem;
+    
+            & .underline-title{
+                display: inline-block;
+                width: 10rem;
+                height:0.2rem;
+                background-color: $color_red_light;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &--content{
+        max-width: $max_width_normal;
+        margin:auto;
+        padding: 3rem 3.5rem;
+
+        & .step--primary{
+            margin:5rem 1.5rem;
+            background: $color_blue_light;
+            padding: 0.5rem;
+            border-radius:5rem;
+            position:relative;
+            //min-height:38rem;
+            box-shadow: 0 0.5rem 5rem 0 rgba(30, 20, 168, 0.1);
+            transition:all .5s linear;
+            transform:skewY(-8deg);
+            cursor:pointer;
+
+            &:nth-child(1){
+                background: linear-gradient(to right bottom, #ff8b00, #ff4704);
+                //transform: skewY(-8deg) translateY(5rem);
+            }
+
+            &:nth-child(2){
+                background: linear-gradient(to right bottom, #cf004d, #f85b8e);
+               // transform: skewY(-8deg) translateY(-5rem);
+            }
+
+            &:nth-child(3){
+                background: linear-gradient(to right bottom,#86d2f3, #12a5f5);
+               // transform: skewY(-8deg) translateY(5rem);
+            }
+
+            &:nth-child(4){
+                background: linear-gradient(to right bottom, #146cf2, #1c72f9);
+               // transform: skewY(-8deg) translateY(-5rem);
+            }
+
+            &  .step--secondary{
+                background: $white;
+                position:relative;
+                padding: 2rem 2rem;
+                border-radius:3rem;
+                color:#777;
+                box-shadow: 0 0.5rem 5rem 0 rgba(30, 20, 168, 0.1);
+                transform:skewY(8deg);
+                height:100%;
+                transition:all .5s linear;
+                border:0.1rem solid rgba(255, 255, 255, 0.2);
+
+                &.odd{
+                    background-image: linear-gradient(to right bottom, $white 60%, rgba(255, 255, 255, 0.5)), url("../../../image/image-base/dd.jpg");
+                    background-position: center;
+                }
+
+                &.even{
+                    background-image: linear-gradient(to right bottom, $white 60%, rgba(255, 255, 255, 0.5)), url("../../../image/image-base/a.jpg");
+                    background-position: center;
+                }
+
+                & .step--central{
+                    position:relative;
+                    transition:all .5s linear;
+
+                    & .step-icon{
+                        width:10rem;
+                        height:10rem;
+                        border-radius:50%;
+                        margin:-6.5rem auto 0;
+                        background: #fff;
+                        border:none;
+                        //box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.05);
+                        transition:all .5s linear;
+
+                        & i{
+                            font-size:5rem;
+                        }
+                    }
+
+                    & .step{
+                        margin: 0 auto 1rem;
+                        line-height: 0.9cm;
+                        & span{
+                            &:first-child{
+                                color:#777;
+                                font-size: 1.8rem;
+                            }
+                            &:nth-child(2){
+                                color:#777;
+                                font-size: 4.5rem;
+                                font-weight: 800;
+                                transition: all .4s linear;
+                            }
+                            &:nth-child(3){
+                                font-size: 1rem;
+                            }
+                        }
+                    } 
+
+                    & h3{
+                        margin: 0 auto 0.5rem;
+                        font-size: 2rem;
+
+                        & span{
+                            display:block;
+                            width: 5rem;
+                            height:0.1rem;
+                            margin: 0.5rem auto 1rem;
+                        }
+                    }
+                    & p{
+                        text-align: center;
+                        font-size:1.4rem;
+                        line-height: 0.6cm;
+                        letter-spacing: 0.04rem;
+                        color:$paragraphe_color_primary;
+                        color:#333;
+                    }
+                }
+            }
+
+          
+
+            &:nth-child(1) .step-icon i,
+            &:nth-child(1) .step--central .step span:nth-child(2),
+            &:nth-child(1) h3{
+               color:#ff4704;
+            }
+            &:nth-child(1) h3 span{
+                background: #ff4704;
+            }
+            &:nth-child(2) .step-icon i,
+            &:nth-child(2) .step--central .step span:nth-child(2),
+            &:nth-child(2) h3{
+               color: #cf004d;
+            }
+            &:nth-child(2) h3 span{
+                background: #cf004d;
+            }
+
+            &:nth-child(3) .step-icon i,
+            &:nth-child(3) .step--central .step span:nth-child(2),
+            &:nth-child(3) h3{
+               color:#12a5f5;
+            }
+            &:nth-child(3) h3 span{
+                background: #12a5f5;
+            }
+
+            &:nth-child(4) .step-icon i,
+            &:nth-child(4) .step--central .step span:nth-child(2),
+            &:nth-child(4) h3{
+               color:#146cf2;
+            }
+            &:nth-child(4) h3 span{
+                background: #146cf2;
+            }
+
+            &:hover{
+               transform:skewY(8deg);
+
+               & .step--secondary{
+                    transform:skewY(-8deg);
+               }
+            }
+            &:hover .step--central .step-icon{
+                transform:rotateZ(360deg);
+            }
+            &:hover .step--central .step span:nth-child(2){
+                font-size: 5.5rem;
+            }
+        }
+    }
+ }
+ 
+ 
+ @media (max-width: 1024px) {
+
+    .operation-layout{
+        
+        &--content{
+            flex-wrap: wrap;
+
+            & .step--primary{
+                flex:40%;
+
+                & .step--secondary{
+
+                    & .flex-box--central{
+                        padding:2rem 0.5rem;
+                        position:relative;
+
+                        & .step-icon{
+                            width:13rem;
+                            height:13rem;
+                            margin:-10rem auto 0;
+
+                            & i{
+                                font-size:5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+    
+ 
+    .flex-box--primary .flex-box--central,
+    .flex-box--primary .flex-box--secondary,
+    .flex-box--primary{
+        transform:skewY(0deg) rotateZ(0deg);
+    }
+ 
+    .flex-box--primary .flex-box--central{
+        transform:skewY(0deg) rotateZ(0deg) translateX(0);
+    }
+ 
+    .flex-box--primary:hover .flex-box--central{
+        transform:skewY(0deg) rotateZ(0deg) translateX(0);
+    }
+ 
+ }
+ 
+ 
+ 
+ @media (max-width: 668px) {
+
+    .operation-layout{
+        
+        &--content{
+
+            & .step--primary{
+                flex:100%;
+                
+               
+
+                & .step--secondary{
+                   
+
+                    & .flex-box--central{
+                        padding:2rem 2rem;
+
+                        & .step span:nth-child(2){
+                            font-size: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+ 
+ @media (max-width: 400px) {
+
+    .operation-layout{
+
+        &--title{
+
+            & h1{
+                font-size: 2rem;
+            }
+        }
+        
+        &--content{
+            padding:2rem 0rem;
+
+            & .step--primary{
+
+                & .step--secondary{
+                    padding:1rem 1rem;
+
+                    & .flex-box--central{
+                        padding:1rem 1rem;
+
+                        & .step-icon{
+                            width:10rem;
+                            height:10rem;
+                            margin:-6rem auto 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }

@@ -1,0 +1,81 @@
+//button
+.buttonbox{
+
+   &--btn {
+      padding: 1rem 2rem 1.2rem 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin:2rem 0 0 0;
+      font-size:1.4rem;
+      background: $color_blue_normal;
+      border:none;
+      color: #fff;
+      border-radius: .4rem;
+     // transition:  .2s linear;
+
+      &.right{
+         float:right;
+      }
+
+      &.full{
+         float:center;
+         width:100%;
+      }
+
+      & span{
+         padding:0 0 0 1rem ;
+      }
+
+      &:hover {
+         background: $color_blue_dark;
+         color: #fff;
+      }
+
+      &:active {
+         box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+      }
+   }
+
+   &--confirm{
+      padding: .4rem 1.2rem .52rem 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size:1.2rem;
+      border:none;
+      color: #fff;
+      border-radius: .4rem;
+
+      &:nth-child(2){
+         margin:0 2rem 1rem .5rem;
+         background: $color_blue_normal;
+
+         &:hover{
+            background: $color_blue_light;
+         }
+      }
+
+      &:nth-child(1){
+         margin:0 0 1rem 0;
+         background: $color_red_normal;
+
+         &:hover{
+            background: $color_red_light;
+         }
+      }
+
+      & span{
+         padding-left: .5rem;
+      }
+   }
+
+  
+
+
+   .disabled{
+      opacity: 0.6;
+
+      &:hover {
+         background: $color_blue_normal;
+      }
+   }
+}

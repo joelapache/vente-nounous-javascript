@@ -1,0 +1,62 @@
+
+/*
+|******************************************************************
+|---------------- nos client partenaire ---------------------------
+|******************************************************************
+*/
+.partner-box{
+    background:#fff;
+    padding:5rem 0 8rem 0;
+    max-width: $max_width_primary;
+    margin: auto;
+
+    &--content{
+        text-align:center;
+        max-width: $max_width_normal;
+        margin:auto;
+        padding:2rem;
+
+        & .title h1{
+            font-size: 4rem;
+            background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+            background-clip: text;
+            color:transparent;
+            margin-bottom: 2rem;
+    
+            & .underline-title{
+                display: inline-block;
+                width: 10rem;
+                height:0.2rem;
+                background-color: $color_red_light;
+                margin-bottom: 1rem;
+            }
+        }
+
+        & ul li{
+            padding:20px;
+
+            &.active img{
+                filter:grayscale(0%);
+            }
+
+            & img{
+                width:100%;
+                -webkit-filter:grayscale(100%);
+                filter:grayscale(100%);
+                transition:all 0.2s linear;
+
+                &:hover{
+                    filter:grayscale(0%);
+                }
+            }
+        }
+
+        & .btn-prev-2,
+        & .btn-next-1{
+           display:none;
+        }
+        
+    }
+ }
+
+ 

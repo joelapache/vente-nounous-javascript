@@ -1,0 +1,102 @@
+.expertise-component{
+    padding:5rem 2rem;
+    background: linear-gradient(to left bottom, $color_gradient);
+    margin: auto;
+    max-width: $max_width_primary;
+
+    &--content{
+        margin: auto;
+        max-width: $max_width_secondary;
+
+        & .title h1{
+            text-align: center;
+            font-size: 3rem;
+            color:$white;
+    
+            & .underline-title{
+                display: inline-block;
+                width: 10rem;
+                height:0.2rem;
+                background-color: $white;
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .title p{
+            text-align: center;
+            word-wrap: normal;
+            color: rgba($color: #fff, $alpha: 1);
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: $base_line_height;
+        }
+
+        & .details{
+            margin:3rem auto;
+            max-width: $max_width_normal;
+
+            & .service div{
+                padding: 1.5rem 1rem;
+                color: rgba($color: #fff, $alpha: 1);
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-left: 5rem;
+
+                &::before{
+                    position:absolute;
+                    content:"7";
+                    font-family: linea-basic-10;
+                    margin-top: -0.6rem;
+                    margin-left: -5rem;
+                    padding:0.5rem 1rem;
+                    border-radius:3rem;
+                    border:0.1rem solid rgba($color: #fff, $alpha: 0.8);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .expertise-component{
+        &--content{
+            & .--row{
+                flex-wrap: wrap;
+
+                & > div{
+                    flex:100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .expertise-component{
+        //nothing
+        &--content{
+            & .title p{
+                text-align: justify;
+                font-size: 1.6rem;
+            }
+
+            & .details{
+    
+                & .service div{
+                    font-size: 1.4rem;
+                    padding-left: 2rem;
+    
+                    &::before{
+                        font-size:1rem;
+                        padding:0.2rem 0.5rem;
+                        margin-top: 0.6rem;
+                        margin-left: -3rem;
+                    }
+                }
+            }
+        }
+    }
+}

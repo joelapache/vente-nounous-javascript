@@ -1,0 +1,104 @@
+
+.header-layout{
+    background: $color_blue_dark;
+    position: relative;
+
+    & .navbar{
+        padding: 1rem 2rem;
+        max-width: 128rem;
+        margin: auto;
+        position: relative;
+    
+        & .icon{
+            & .logo{
+                width:10rem;
+            }
+        }
+
+        & .menu{
+            & .item{
+                
+                & a{
+                    font-size: 1.6rem;
+                    color:#fff;
+
+                    .fa-shopping-basket{
+                        font-size: 2rem;
+                    }
+
+                    & #qte_in_basket{
+                        display: inline-block;
+                        font-size: 1rem;
+                        padding:0 .4rem;
+                        color: $color_blue_dark;
+                        border-radius: 1rem;
+                        background: #fff;
+                        position: absolute;
+                        top: 1.8rem;
+                        margin-left: -.5rem;
+                        font-weight: 600;
+                    }   
+                }
+            }
+        }
+    }
+}
+
+
+ .banner-layout{
+        background: $color_blue_normal;
+
+    & .container{
+        max-width: 102.4rem;
+        margin: auto;
+        height: 40rem;
+
+        & .description{
+
+            & .title-ft{
+                font-size: 4rem;
+                color: #fff;
+                line-height: normal;
+            }
+
+            & p{
+                font-size: 2rem;
+                color: #fff;
+                line-height: normal;
+
+                & span{
+                    font-size: 4rem;
+                }
+            }
+
+            & .price{
+                font-size: 3rem;
+                color: #fff;
+            }
+
+            & .btn-add-basket{
+                display: inline-block;
+                font-size: 1.6rem;
+                margin-top: 3rem;
+                padding: 1rem 2rem;
+                background: #fff;
+                border-radius: .5rem;
+                font-weight: 600;
+                color: $color_blue_normal;
+                transition: all .2s linear;
+
+                &:hover{
+                    background: $color_blue_dark;
+                    color:#fff ;
+                }
+            }
+        }
+
+        & .illustration{
+            
+            & .banner-image{
+                width: 100%;
+            }
+        }
+    }
+}

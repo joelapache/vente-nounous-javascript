@@ -1,0 +1,223 @@
+.header-layout{
+    padding: .6rem 2rem .6rem 1rem;
+    position:fixed;
+    width:100%;
+    background: $color_blue_dark; //rgb(40, 57, 145)
+    border-left: 1rem solid $color_blue_dark; //rgb(24, 37, 100)
+    user-select: none;
+    z-index: 13;
+    
+    //logo de la plate-forme
+    &--icon{
+        
+        & .app-icon{
+            height:3.8rem;
+            width:14rem;
+        }
+    }
+
+    // zone de recherche
+    &--search{
+
+        & .form-search{
+
+            &--icon{
+
+                &::before{
+                    position: absolute;
+                    font-family:FontAwesome;
+                    font-size:1.6rem;
+                    content:"\f002";
+                    margin-left: 1.5rem;
+                    margin-top: 0.5rem;
+                    color:#999;
+                }
+            }
+
+
+            &--input{
+                font-size:1.4rem;
+                width:100%;
+                height:4rem;
+                border:.1rem solid $color_blue_light;
+                border-radius: 1rem;
+                padding:0 0 .3rem 4rem;
+                margin: auto;
+                transition: all .3s linear;
+                color:#bbb;
+                background: $color_blue_normal;
+
+                &:focus{
+                    font-size:1.6rem;
+                    padding-left:4rem;
+                    color:#fff;
+                }
+
+                &:hover{
+                    color:#ddd;
+                }
+
+                
+            }
+        }
+    }
+
+    &--tools{
+
+        & ul{
+
+            & li{
+                cursor:pointer;
+                position: relative;
+
+                & label{
+                    
+                    &::before{
+                        font-family:FontAwesome;
+                        font-size:2rem;
+                        color:#bbb;
+                        transition: all .3s linear;
+                    }
+                    &:hover::before{
+                        color:#fff;
+                    }
+                }
+
+
+                //icon de parametre
+                &.setting{
+                    
+                    & .setting-label{
+                        
+                        &::before{
+                            content:"\f013";
+                        }
+                    }
+                }
+                //incon de notification
+                &.notice{
+
+                    & .notice-label{
+                        &::before{
+                            content:"\f0a2";
+                        }
+                    }
+
+                    & .notice-count{
+                        color:#fff;
+                        background: $color_blue_normal;
+                        padding:0.2rem 0.4rem;
+                        border-radius: 1rem;
+                        font-size: 0.7rem;
+                        position:absolute;
+                        transform: translateY(.1rem) translateX(-1.3rem);
+                    }
+                }
+
+
+                //icon d'aide
+                &.help{
+
+                    & .help-label{
+                        &::before{
+                            content:"\f059";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--profile{
+
+        & ul{
+
+            & li{
+                font-size:1.2rem;
+                cursor:pointer;
+
+
+                
+                & label{
+                    
+                    &::before{
+                        font-family:FontAwesome;
+                        font-size:2.5rem;
+                        color:#bbb;
+                        transition: all .3s linear;
+                    }
+                    &:hover::before{
+                        color:#fff;
+                    }
+                }
+
+
+                //icon de parametre
+              
+                
+
+                &.profile{
+                    border:.1rem solid $color_blue_light;
+                    padding: 0rem .4rem  .1rem 1rem;
+                    border-radius: 3rem;
+                    background: $color_blue_normal;
+                    transition-property:border background;
+                    transition-timing-function: ease-in;
+                    transition-duration: .3s;
+                    position:relative;
+
+                    & .head{
+
+                        & .user-name{
+                            font-weight: 600;
+                            color:#bbb;
+                        }
+
+                        & .user-icon{
+                            width:3rem;
+                            height:3rem;
+                            border:0.2rem solid rgba(0, 0, 0, 0.1);
+                            border-radius: 3rem;
+                            margin-left: 1rem;
+                            transform: scale(1.28);
+                            background: white;
+                            transition:border .3s linear;
+                        }
+                    }
+
+                    &:hover{
+                        background: rgba(27, 7, 206, 0.1);
+
+                        & .head .user-icon{
+                            border:0.2rem solid rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                }
+
+                &.signout{
+                    color:#999;
+                    transition: color .2s linear;
+                    padding-left: 2rem;
+
+                    &::before{
+                        font-family:FontAwesome;
+                        font-size:2rem;
+                        content:"\f011"; //f08b
+                    }
+
+                    &:hover{
+                        color:#fff;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+}
+
+
+@media (max-width: 800px){
+ 
+}

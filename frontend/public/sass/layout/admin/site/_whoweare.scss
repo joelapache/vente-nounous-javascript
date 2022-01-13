@@ -1,0 +1,76 @@
+
+/*----- why us (qui sommes nous ?) component -------*/
+.whoweare-component{
+    background-color: $white;
+
+    &--content{
+        margin: auto;
+        max-width: 160rem;
+        padding:2rem;
+    }
+
+    &--title h1{
+        font-size: 3rem;
+        background: linear-gradient(to left bottom, $color_blue_normal, $color_blue_light);
+        background-clip: text;
+        color:transparent;
+        margin-bottom: 2rem;
+
+        & .underline-title{
+            display: inline-block;
+            width: 10rem;
+            height:0.2rem;
+            background-color: $color_red_light;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--title p{
+        font-size: 1.8rem;
+        font-weight: 200;
+        color: #444;
+        line-height: $base_line_height;
+        text-align: justify;
+        text-indent: 1cm;
+    }
+   
+
+    &--image .illustrate-img{
+        width:100%;
+    }
+}
+
+
+
+@media (max-width: 868px) {
+    .whoweare-component{
+        & .--row{
+            flex-wrap: wrap;
+
+            & > .flex-col-50{
+                flex:100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .whoweare-component{
+
+        &--title h1{
+            text-align: center;
+            font-size: 2.5rem;
+
+            & .underline-title{
+                margin:auto;
+            }
+        }
+
+        &--title p{
+            text-align: justify;
+            text-indent: 1cm;
+            word-wrap: normal;
+        }
+    }
+}
+

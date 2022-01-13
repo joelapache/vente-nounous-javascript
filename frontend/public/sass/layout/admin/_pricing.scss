@@ -1,0 +1,129 @@
+.princing-layout{
+    margin: 1rem 0;
+
+    & .package{
+        box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.2);
+        border: .1rem solid #eee;
+        border-radius:1rem;
+        border-bottom: .3rem solid $color_blue_normal;
+
+        &:hover{
+            box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+        }
+        
+
+        & .banner{
+            border-radius:1rem ;
+            background: linear-gradient(to right top, $color_blue_normal, $color_blue_light);
+            height:17rem;
+            font-size:2rem;
+            color:#fff;
+
+            & .fa{
+                font-size: 3rem;
+                margin-top: 2rem;
+                border: .1rem solid #fff;
+                padding: 1rem 1rem;
+                border-radius:30rem;
+            }
+        }
+
+        & .price{
+            box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, 0.2);
+            margin: 0 3rem;
+            transform: translateY(-4rem);
+            background: #fff;
+            border-radius:1rem;
+            padding: 1rem;
+            max-width: 26rem;
+
+            & h1{
+                font-size: 2.6rem;
+                color:$color_blue_normal;
+
+                & sup{
+                    font-size: 1.6rem;
+                }
+            }
+
+            & p{
+                text-align: center;
+                font-size:1.3rem;
+                color:#666;
+            }
+
+            & span{
+                text-decoration: line-through;
+                font-size:1.4rem;
+            }
+        }
+
+        & .tools{
+            margin: 0 0 2rem 0;
+
+            & li{
+                padding:.5rem 0 .5rem 6rem;
+                font-size:1.6rem;
+                color:#666;
+
+                &::before{
+                    position:absolute;
+                    content:'\f043';
+                    margin-left: -2.5rem;
+                    margin-top: .4rem;
+                }
+
+                &.--wait{
+
+                    &::after{
+                        font-family: inherit;
+                        content:'En cours';
+                        margin-left: 1rem;
+                        padding:.2rem 1rem .4rem 1rem;
+                        background: $color_red_normal;
+                        font-size:1.2rem;
+                        color:#fff;
+                        border-radius: 1rem 0;
+                    }
+                }
+            }
+        }
+
+        & .package-btn{
+
+            & div{
+                border:none;
+                border-radius:2rem;
+                background:$color_blue_normal;
+                color:#fff;
+                margin: 1rem 1rem 3rem 1rem; 
+                padding: .6rem 2rem .9rem 2rem;
+                font-size: 1.6rem;
+
+                &:hover{
+                    background:$color_blue_dark;
+                }
+            }
+        }
+
+
+        &:nth-child(2){
+
+            & .price{
+
+                &::before{
+                    font-family: inherit;
+                    position:absolute;
+                    content:'Recommandé';
+                    margin-left: 0rem;
+                    margin-top: -13.5rem;
+                    padding:.2rem 1rem .4rem 1rem;
+                    background: $color_red_normal;
+                    font-size:1.4rem;
+                    color:#fff;
+                    border-radius: 1rem 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+.list-layout{
+    width:100%;
+    background: #fff;
+    margin:1rem auto 0rem auto;
+    //box-shadow: 0 0rem 1rem 0 rgba(0, 0, 0, 0.05);
+
+    //entet de liste
+    &--header{
+        padding:1rem 1rem;
+        font-size:1.6rem;
+    }
+    
+
+    //table de liste
+    & table{
+        width:100%;
+        border-collapse: collapse;
+       
+        //border:0.1rem solid rgba(0, 0, 0, 0.1);
+        border-bottom:.1rem dashed rgb(66, 87, 191);
+
+        & thead{
+
+            & tr{
+                //border-bottom: 0 solid #eee;
+                background: $color_blue_light;
+               // box-shadow: 0 .2rem 1rem 0 rgb(40, 57, 145, 0.1);
+
+                & th{
+                    font-weight: 800;
+                    font-size:1.2rem;
+                    padding:1rem 1rem 1rem 1rem;
+                    text-align: left;
+                    color:#fff;
+                    padding-right: 1rem;
+                    user-select: none;
+                    border: 0.1rem solid $color_blue_light;
+                    border-right: .1rem solid rgba(255, 255, 255, 0.1);
+
+                    &.--center{
+                        text-align: center;
+                    }
+
+                    &::first-letter{
+                        text-transform: uppercase;
+                    }
+
+                    &:first-child{
+                        width:4rem;
+                    }
+
+                    &:nth-child(2){
+                        width:6rem;
+                    }
+
+                    &.--op{
+                        width:3rem;
+                    }
+                }
+
+                & .--arrow::before{
+                    content:"\f0dc";
+                    float:left;
+                    margin-top: .1rem;
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        & tbody{
+            background: #fff;
+
+            & tr{
+
+                
+
+                &:nth-child(even){
+                    //background:  rgb(19, 12, 117, 0.18);
+                   // background:  rgb(19, 12, 117, 0.13); rgba(66, 87, 191, 0.1)
+                    background: rgba(66, 87, 191, 0.1);
+                   
+                }
+
+                &:nth-child(odd){
+                    background:  #fff;
+                }
+
+                
+                & td{
+                    font-weight: 400;
+                    font-size:1.1rem;
+                    padding:.6em 1rem .6rem 1rem;
+                    text-align: left;
+                    color:#222;
+                    border-right: 0.1rem dashed rgba(0, 0, 0, 0.3);
+                    cursor: pointer;
+                    font-family:Arial, Helvetica, sans-serif;
+
+                    
+                    &.--center{
+                        text-align: center;
+                    }
+
+
+                    &:first-child{
+                        border-left: 0.1rem solid rgba(0, 0, 0, 0.15);
+                    }
+
+                    &:last-child{
+                        border-right: 0.1rem solid rgba(0, 0, 0, 0.1);
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3){
+                        font-weight: 600;
+                    }
+
+                  
+                    & .op-btn{
+                        
+                        &::after{
+                            content:"\f142";
+                            padding: .7rem 1.2rem .5rem 1.2rem;
+                            border-radius: 5rem;
+                            font-size: 1.4rem;
+                            background: rgba(40, 57, 145, 0.2);
+                            color:rgb(40, 57, 145);
+                            transition: all .2s linear;
+                        }
+
+                        &:hover::after{
+                            background: rgb(40, 57, 145);
+                            color:#fff;
+                        }
+                    }
+
+                    & span{
+                        border-radius:3rem;
+                        padding:.3rem 1.5rem .3rem 1.5rem;
+
+                        &.--disabled{
+                            background: rgba(206, 109, 109, 0.4);
+                            color:red;
+                        }
+
+                        &.--enabled{
+                            background: rgba(74, 179, 126, 0.4);
+                            color:rgb(2, 82, 6);
+                        }
+
+                        &.--confirm{
+                            background: rgba(74, 179, 126, 0.4);
+                            color:rgb(2, 82, 6);
+                        }
+
+                        &.--wait{
+                            background: rgba(194, 192, 56, 0.4);
+                            color:rgb(82, 74, 2);
+                        }
+                    }
+                }
+
+                &.selected
+                {
+                    &:nth-child(even){
+                        background: rgba(252, 208, 208, 0.795);
+                    }
+
+                    &:nth-child(odd){
+                        background: rgba(243, 176, 176, 0.795);
+                    }
+                }
+
+
+                & .--upper{
+                    text-transform: uppercase;
+                }
+
+                &:hover{
+                    //background: rgba(184, 29, 29, 0.04);
+
+                    & td{
+                        color:$color_red_normal;
+                    }
+                }
+            }
+        }
+    }
+    
+}

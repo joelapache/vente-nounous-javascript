@@ -1,0 +1,92 @@
+.advantage-layout{
+    
+    &.cris{
+        background: transparent;
+        padding: 5rem 0 5rem 0;
+        transform: translateY(3rem);
+    }
+
+    &--content{
+        
+        max-width: $max_width_tertialy;
+        margin:0 auto 3rem ;
+
+        & .primary--advantage{
+            margin:4rem  1.5rem;
+            text-align: center;
+            background: $white;
+            box-shadow: 0 1rem 8rem 0 rgba(30, 20, 168, 0.2);
+            border-radius:4rem 2rem;
+            padding: 4rem 1.5rem;
+            position: relative;
+            cursor:pointer;
+            transition: transform .3s ease;
+
+            &:hover{
+                transform: translateY(-1rem);
+            }
+
+            & h2{
+                color:#555;
+                margin: 1.5rem auto 1rem;
+                transition: background .3s ease;
+            }
+
+            &:hover h2{
+                background-image: linear-gradient(to left bottom, $color_gradient);
+                background-clip: text;
+                color:transparent;
+            }
+
+            & p{
+                color:#777;
+                line-height: 0.7cm;
+                font-size: 1.4rem;
+            }
+
+            &-icon{
+                width:8.4rem;
+                height:8.4rem;
+                border-radius:80%;
+                margin:-7.6rem auto 0;
+                padding: 1rem;
+                background: $color_blue_normal;
+                background-image: linear-gradient(to left bottom, $color_gradient);
+                background-size: 100% 100%;
+                box-shadow: 0 0 5rem 0 rgba(30, 20, 168, 0.2);
+                transition:all .5s linear;
+
+                & i{
+                    font-size:3.8rem;
+                    color:$white;
+                }
+            }        
+        }
+    }
+}
+     
+
+@media (max-width: 940px) {
+    .advantage-layout{
+        &--content{
+            flex-wrap: wrap;
+
+            & .primary--advantage{
+                flex:40%;
+            }
+        }
+    }  
+}
+    
+
+@media (max-width: 480px) {
+    .advantage-layout{
+        &--content{
+            flex-direction: column;
+
+            & .primary--advantage{
+                flex:100%;
+            }
+        }
+    } 
+}

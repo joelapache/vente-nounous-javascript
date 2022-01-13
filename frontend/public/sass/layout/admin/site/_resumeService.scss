@@ -1,0 +1,210 @@
+.service-layout{
+    background:rgba(0, 0, 0, 0.03);
+    max-width: $max_width_primary;
+    margin:auto;
+    background-attachment: fixed;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6)),url('../../../image/image-base/font-livre.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--title {
+        text-align: center;
+        max-width: $max_width_secondary;
+        margin:auto;
+        padding:5rem 2rem 0 2rem;
+
+        & h1{
+            font-size: 4rem;
+            color:rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+
+            & .underline-title{
+                display: inline-block;
+                width: 10rem;
+                height:0.2rem;
+                background-color: rgba(255, 255, 255, 0.8);
+                margin-bottom: 1rem;
+            }
+        }
+
+        & p{
+            font-size: 1.8rem;
+            font-weight: 200;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: $base_line_height;
+        }
+    }
+
+    &--services{
+        margin: auto;
+        margin-top:5rem;
+        padding: 0 3rem  4rem 3rem;
+        max-width: $max_width_primary;
+       
+        & .box-slider {
+            cursor: pointer;
+            margin: 2rem;
+            transition: all .3s linear;
+            background:#fff;
+            border:0.1rem solid #ddd;
+            position:relative;
+            transition: all .3s linear;
+            outline-offset:.4rem;
+
+            & .logo {
+                padding: 1rem;
+
+                & span {
+                    display: inline-block;
+                    background: #eee;
+                    height: 10rem;
+                    width: 10rem;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+    
+                    & i {
+                        padding: 1rem;
+                        background-image:linear-gradient(to left bottom, $color_gradient);
+                        background-clip: text;
+                        color: transparent;
+                        font-size: 5rem;
+                        transition:all 0.3s linear;
+                        font-family:FontAwesome;
+                    }
+                }
+            }
+
+            & .details {
+                padding: 1rem;
+
+                & h3 {
+                    font-size:1.6rem;
+                    text-align: left;
+                    color:#444;
+                }
+                & p {
+                    font-size:1.2rem;
+                    text-align: left;
+                    padding: 1rem 0 .5rem 0;
+                    line-height:0.6cm;
+                    color:rgba(0, 0, 0, 0.7);
+                }
+            }
+
+            &:hover {
+                z-index:1;
+                position:relative;
+                outline:.5rem solid #fff;
+            }
+            &:hover .logo span i {
+                color: #fff;
+            }
+            &:hover .logo span {
+                background: linear-gradient(to left bottom, $color_gradient);
+                font-family:FontAwesome;
+                color: #fff;
+            } 
+        }
+    }
+
+    &--btn{
+        padding-bottom: 5rem;
+        padding-top: 3rem;
+
+        & a{
+           border:0.1rem solid $white;
+            padding:1.2rem 3rem 1.4rem 3rem;
+            font-size:1.8rem;
+            font-weight: 400;
+            color:$white;
+            border-radius: 5rem;
+            transition: all .3s linear;
+
+            & i{
+                transition: all .3s linear;
+                opacity: 0;
+            }
+
+            &:hover{
+                box-shadow: 0 1rem 4rem 0 rgba(0, 0, 0, 0.3);
+                background: $white;
+                color:#444;
+                padding:1.2rem 4rem 1.4rem 2rem;
+
+                & i{
+                    opacity: 1;
+                    transform: translateX(2rem);
+                }
+            }
+        }
+        
+    }
+}
+ 
+
+ 
+ 
+ @media (max-width: 1024px) {
+    
+ 
+    
+ }
+ 
+@media (max-width: 868px) {
+    .service-layout{
+
+        &--services{
+
+            padding: 10rem 1rem;
+
+            & .box-slider{
+                flex:40%;
+                margin:10px;
+            }
+        }
+    }
+ }
+ 
+@media (max-width: 700px) {
+    .service-layout{
+
+        &--title{
+            & p{
+                text-align:justify;
+            }
+        }
+
+        &--services{
+            
+            & .box-slider{
+                display: flex;
+                flex-direction: column;
+
+                & .details{
+
+                    & h3,
+                    & p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+ }
+ 
+ @media (max-width: 480px) {
+    .service-layout{
+
+        &--services.--row{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem  1rem;
+        }
+    }
+}
+ 
+ 
+ 
+ 

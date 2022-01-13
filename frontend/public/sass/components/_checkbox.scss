@@ -1,0 +1,49 @@
+.checkedbox{
+    position: relative;
+
+    & .chk-input{
+        display: none;
+
+        &:checked ~ .chk-label{
+            background: $color_blue_normal;
+
+            &::before{
+                color: #fff;
+            }
+        }
+    }
+
+    & .chk-label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width:2rem;
+        height:2rem;
+        border:.2rem solid $color_blue_normal_8;
+        border-radius:.4rem;
+        
+
+        &::before{
+            position: absolute;
+            content:"\f00c";
+            top:-25%;
+            left:2%;
+            font-size: 1.4rem;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+
+.global-checkbox-label,
+.checkbox-label {
+    font-size: 1.6rem;
+}
+
+.global-checkbox-label{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color:#444;
+}

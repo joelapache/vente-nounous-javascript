@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" href="public/css/style.min.css"  media="all" />
+    <link rel="shortcut icon" href="http://127.0.0.1:3000/images/logo_orinoco.png" type="image/png">
+    <title>Accueil - Orinoco</title>
+</head>
+<body>
+  <header class="header-layout ">
+    <nav class="navbar flex-container --row --justify-between --align-center">
+      <a href="index.html" class="icon"><img class="logo" src="http://127.0.0.1:3000/images/logo_orinoco.png" alt=""></a>
+      <ul class="menu flex-container --row --justify-end --align-center">
+        <li class="item --margin-right-10">
+          <a href="panier.html">
+            <span id="qte_in_basket">0</span>
+            <i class="fa fa-shopping-basket"></i>
+          </a>
+        </li>
+        <li class="item --margin-left-10"><a href="index.html">Produits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-lis-layout">
+    <h1 class="title">Réçu de la commande</h1>
+    <div class="data">
+      <table class="table-info"></table>
+      <table class="table"  rules="all">
+        <thead class="thead-dark">
+          <tr>
+            <td scope="col">N°</td>
+            <td scope="col">Nom</td>
+            <td scope="col">Qté</td>
+            <td scope="col">Prix</td>
+            <td scope="col">Couleur</td>
+          </tr>
+        </thead>
+        <tbody id="product_in_basket"></tbody>
+        <tfoot id="product_stat"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <div style="text-align: right; max-width: 102.4rem; margin: auto; font-size: 1.6rem; color: rgb(1, 67, 122); font-weight: 600; padding-top: 3rem;"> Fait le, <span id="data-date">12/20/20</span> à Yaoundé.</div>
+
+  <script src="public/Js/basket.js" type='text/javascript' language="javascrict"></script>
+  <script src="public/Js/produit.js" type='text/javascript' language="javascrict"></script>
+  <script>
+    var date = new Date();
+    document.querySelector('#data-date').innerHTML = date.getUTCDate() +" / "+date.getMonth()+" / "+date.getFullYear();
+  </script>
+</body>
+</html>
