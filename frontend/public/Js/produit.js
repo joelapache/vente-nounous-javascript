@@ -115,13 +115,12 @@ function Product(options = []) {
          */
         showPromo: function(data)
         {
-            let target = document.querySelector('#banner-pub');
-            if(target == null) return false;
-
+            if(document.querySelector('#banner-pub-content') == null) return false;
+         
             data.map(item => {
                 if(item.pub == true)
-                {
-                    target.insertAdjacentHTML('beforeend', `<div class="description flex-col-50 flex-container --column --justify-start --align-start">
+                { 
+                    document.querySelector('#banner-pub-content').insertAdjacentHTML('beforeend', `<div class="description flex-col-50 flex-container --column --justify-start --align-start">
                         <h1 class="title-ft">${item.name}</h1>
                         <p>Obtenez jusqu'à <span>40%</span>  de reduction</p>
                         <span class="price">Solde: ${item.price} €</span>
@@ -145,8 +144,8 @@ function Product(options = []) {
         */
         showTedies: function(data)
         {
-            let target = document.querySelector('#products-side');
             this.showPromo(Object.values(data));
+            var target = document.querySelector('#products-side');
             
             for(const key in data)
             {
@@ -217,7 +216,7 @@ function Product(options = []) {
          * 
          * @param {*} data
          */
-        showListInbasket: function(data)
+        showListInbasket: async function(data)
         {
             var basket = Basket().get('basket');
 
@@ -231,7 +230,7 @@ function Product(options = []) {
                 var i   = 1,
                     arr = [0, 0, 0];
 
-                data.map((item) => {
+                await data.map((item) => {
                     if(idents.includes(item._id))
                     {
                         let qte = Basket().key(item._id).qte;
@@ -253,6 +252,7 @@ function Product(options = []) {
 
                 var target = document.querySelector('#product_stat');
                 if(target == null) return false;
+
                 target.insertAdjacentHTML('beforeend', ` <tr>
                     ${(location.href.split('/')[3] == 'panier.html') ? `<td scope="col"></td><td scope="col"></td>` : ''}
                     <td scope="col"></td>
@@ -261,7 +261,6 @@ function Product(options = []) {
                     <td scope="col">Total</td>
                     <td scope="col">${ arr[2] } €</td>
                 </tr>`);
-
             }
            
         },
@@ -294,6 +293,11 @@ function Product(options = []) {
 
 
 
+/**
+ * -----------------------------------------------------------
+ * Mise des produit dans le panier
+ * ----------------------------------------------------------
+*/
 
 if(document.getElementById('form-product-id') != undefined){
     // ecoute du clique du bouton d'ajout au panier
@@ -338,7 +342,8 @@ if(document.getElementById('form-product-id') != undefined){
                 Basket().set("basket", [{id:id_produit, qte:qte_produit, clr:clr_produit}]);
             }
             
-            console.log(Basket().get("basket"));
+            alert("Le produit a été place dans le panier.");
+            location = 'index.html';
         }
     });
 }
@@ -346,22 +351,23 @@ if(document.getElementById('form-product-id') != undefined){
 
 // validation de la commande.
 if(document.getElementById('form-command-id') != undefined)
-{
-    // ecoute du clique du bouton d'ajout au panier
+{ 
     const command_form = document.getElementById('form-command-id');
-    const nom       = document.getElementById('nombox').value;
-    const prenom    = document.getElementById('prenombox').value;
-    const email     = document.getElementById('emailbox').value;
-    const adresse   = document.getElementById('adressebox').value;
 
     // si l'utilisateur valide l'ajout du produit au panier
-    command_form.addEventListener('submit', function(e){
+    command_form.addEventListener('submit', function(e)
+    {
         e.preventDefault();
+
+        const nom       = document.querySelector('#nombox').value;
+        const prenom    = document.querySelector('#prenombox').value;
+        const email     = document.querySelector('#emailbox').value;
+        const adresse   = document.querySelector('#adressebox').value;
 
         if(nom.length > 1 && prenom.length > 1 && adresse.length > 1  && email.length > 1)
         {
-            location = 'validation.html';
             Basket().set('command', [nom, prenom, email, adresse]);
+            location = 'validation.html';
 
         }else{
             document.getElementById('SubmitErreur').innerHTML = 'Certaines informations sont manquantes ou invalides.';
@@ -389,7 +395,7 @@ window.addEventListener("load", function () {
                 Basket().getCommandInfo(); // on affiche les information du client dans la facture
             }
         }
-        else if(location.href.split('/')[3] == 'index.html')
+        else if(location.href.split('/')[3] == 'index.html' || location.href.split('/')[3] == '')
         {
             Product().getTedis(['all'], true); // on affiche les produit en stock
         }

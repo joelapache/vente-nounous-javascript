@@ -151,12 +151,14 @@ function Basket(options = []) {
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td>${ com[3] }</td>
+                    <td>${ com[2] }</td>
                     <td>Ville</td>
-                    <td>${ com[4] }</td>
+                    <td>${ com[3] }</td>
                 </tr>`);
             
-            this.clean(); // on vide le panier.
+            setInterval(() => {
+                this.clean(); // on vide le panier.
+            }, 1000);
         }
     }
 
